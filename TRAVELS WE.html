@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globetrotter Travel Agency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background: #f9fafd;
+            color: #222;
+        }
+        header {
+            background: #0492c2;
+            color: white;
+            padding: 25px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 0; background: #03506f;
+            text-align: center;
+        }
+        nav a {
+            color: white; text-decoration: none;
+            margin: 0 18px; padding: 12px 0;
+            display: inline-block;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main { max-width: 1100px; margin: 30px auto; padding: 0 18px; }
+        section { margin-bottom: 45px; }
+        h2 { color: #0492c2; }
+        .packages, .gallery { display: flex; flex-wrap: wrap; gap: 22px; }
+        .package, .gallery-item {
+            background: white;
+            box-shadow: 0 2px 7px rgba(0,0,0,0.09);
+            border-radius: 11px;
+            padding: 18px;
+            flex: 1 1 240px;
+            min-width: 240px;
+            max-width: 320px;
+            transition: transform 0.2s;
+        }
+        .package:hover, .gallery-item:hover {
+            transform: scale(1.04);
+        }
+        .package img, .gallery-item img {
+            max-width: 100%; border-radius: 7px;
+            height: 170px; object-fit: cover;
+            margin-bottom: 13px;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 11px;
+            box-shadow: 0 2px 7px rgba(0,0,0,0.06);
+            max-width: 460px;
+            margin: 0 auto;
+        }
+        form input, form select {
+            border-radius: 5px; border: 1px solid #ccc;
+            padding: 8px; margin-bottom: 12px;
+            width: 100%; box-sizing: border-box;
+        }
+        form button {
+            background: #0492c2; color: white;
+            border: none; border-radius: 5px;
+            padding: 9px 18px; font-size: 16px;
+        }
+        ul.tips { list-style: circle; padding-left: 24px; }
+        footer {
+            background: #e3eff6;
+            padding: 19px 0;
+            text-align: center;
+            color: #333;
+            margin-top: 50px;
+        }
+        @media (max-width: 800px) {
+            .packages, .gallery {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DOREDO TREVELES</h1>
+        <p>Your gateway to the world – Tour packages, bookings, & travel inspiration</p>
+    </header>
+    <nav>
+        <a href="#packages">Tour Packages</a>
+        <a href="#booking">Book Now</a>
+        <a href="#tips">Travel Tips</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+    <main>
+        <!-- Tour Packages Section -->
+        <section id="packages">
+            <h2>Popular Tour Packages</h2>
+            <div class="packages">
+                <div class="package">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Bali Beach">
+                    <h3>Bali Beach Escape</h3>
+                    <p>Enjoy 7 days of sun, surf, and culture on Indonesia’s most vibrant island. Flights & resort stay included.</p>
+                    <p><strong>From $1,299</strong></p>
+                </div>
+                <div class="package">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Paris Package">
+                    <h3>Paris & the Loire Valley</h3>
+                    <p>Experience romance and history! 5 nights in Paris plus a two-day tour of fairy-tale castles.</p>
+                    <p><strong>From $1,799</strong></p>
+                </div>
+                <div class="package">
+                    <img src="https://images.unsplash.com/photo-1433878455169-4698b20b6be9?auto=format&fit=crop&w=400&q=80" alt="Tokyo Adventure">
+                    <h3>Tokyo Adventure</h3>
+                    <p>Discover ultramodern Tokyo and serene Mount Fuji in this exciting all-inclusive 6-day tour.</p>
+                    <p><strong>From $1,499</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section id="booking">
+            <h2>Book Your Trip</h2>
+            <form>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                    
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+                    
+                <label for="package">Select Package:</label>
+                <select id="package" name="package" required>
+                    <option value="">--Choose a Package--</option>
+                    <option value="bali">Bali Beach Escape</option>
+                    <option value="paris">Paris & Loire Valley</option>
+                    <option value="tokyo">Tokyo Adventure</option>
+                </select>
+                    
+                <label for="date">Preferred Start Date:</label>
+                <input type="date" id="date" name="date" required>
+                    
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+
+        <!-- Travel Tips Section -->
+        <section id="tips">
+            <h2>Travel Tips</h2>
+            <ul class="tips">
+                <li>Pack light and bring only essentials to make traveling easier.</li>
+                <li>Keep digital and physical copies of your passport and important documents.</li>
+                <li>Learn basic phrases in the local language for better experiences.</li>
+                <li>Always check the weather forecast and pack appropriate clothing.</li>
+                <li>Try local cuisine and respect cultural customs.</li>
+            </ul>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <h2>Gallery of Destinations</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1465156799763-2c087c332922?auto=format&fit=crop&w=400&q=80" alt="Santorini">
+                    <p>Santorini, Greece</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=400&q=80" alt="Great Wall of China">
+                    <p>Great Wall of China</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&q=80" alt="Maldives">
+                    <p>Maldives</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="New York">
+                    <p>New York, USA</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1463592177119-bab2a00f3d50?auto=format&fit=crop&w=400&q=80" alt="Sydney Opera House">
+                    <p>Sydney, Australia</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Globetrotter Travel Agency &ndash; Explore the world with us!
+    </footer>
+</body>
+</html>
